@@ -1,8 +1,13 @@
-# React + Vite
+# React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Архитектура - Feature-Sliced Design
 
-Currently, two official plugins are available:
-
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Слой      | Описание                                                      |
+| --------- | ------------------------------------------------------------- |
+| app       | Инициализирующая логика приложения                            |
+| processes | (Опц.) Процессы приложения, протекающие над страницами        |
+| pages     | Страницы приложения(должны быть максимально тонкими)          |
+| widgets   | Самостоятельные и полноценные блоки для страниц               |
+| features  | (Опц.) Обрабатываемые пользовательские сценарии               |
+| entities  | (Опц.) Бизнес сущности, которыми оперирует предметная область |
+| shared    | Переиспользуемые модули без привязки к бизнес логике          |
